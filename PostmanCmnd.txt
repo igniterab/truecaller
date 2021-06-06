@@ -1,0 +1,43 @@
+1. http://localhost:8000/account/register/
+Paste this in body in json format
+{
+	"name":"Ashish Bhardwaj",
+	"password":"1234",
+	"email": "ashish@gmail.com",
+	"phone_no": 9988654999
+}
+
+2. http://localhost:8000/account/login/
+
+Paste this in body in json format
+{
+	"password":"1234",
+	"phone_no": 9988654999
+}
+
+Copy the generated token for further authentication purposes.
+
+3. http://localhost:8000/account/search_phone?phone_no=9999999999
+
+Replace 9999999999 with no. to be searched
+Paste the token from previous step in authorisation(Header) with Token as prefix in steps 3-6 as they will ask for authorisation
+for ex: Token 2b854441efe4aee804cba53fd5b81bfe8928c410
+
+4. http://localhost:8000/account/mark_spam/
+
+{
+	"phone_no": 9900990099
+}
+
+5.http://localhost:8000/account/search_name?name=Gupta
+
+Replace Gupta with name to be searched
+
+6. http://localhost:8000/account/dbcontacts/
+
+same URL for both GET and POST use POST and below JSON to add or simple GET to see all the phone numbers.
+{
+        "name": "Ram Gupta",
+        "phone_no": 
+}
+

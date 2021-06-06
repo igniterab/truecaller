@@ -1,0 +1,30 @@
+1. Create models/Tables to store 
+    a.Contact
+        (name , email, phone_no, is_spam, date_created)
+    b.Profile
+        (onetoone with user , name , email , phone_no , is_spam , date_created)
+    c.Mapping of Contact and Profile
+        because there may be some numbers which doesn't belong to any user contactlist
+
+2. URL's
+    a. register -> To register
+    b. login -> To login
+    c. contact -> To see all the global db or create contacts in db (additional functionality used for testing)
+    d. Mark spam -> To mark a number as spam
+    e. Search by number -> To search by number and show mail only if the logged in user is in the 
+        contact list of the number which is being searched.
+    f. Search by name -> To search the database having initial name or some part of name as given name
+
+3. we will be doing authentication by Token authentication class of restframework.
+  can also use sessions and permission classes for stopping unauthorized access but we will later see.
+
+4. Make use of Postman no need to write any templates or httpresponses take use of restframework.
+
+5. We will be using default sqlite3  database
+
+6. I will be taking phone number in place of username as a user registered with a phone number will 
+be considered unique
+
+
+7. superuser : admin
+    password : admin
